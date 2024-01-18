@@ -36,7 +36,7 @@ object Res {
         const val NAME = "Daniel Pitropovski"
         const val PROFESSION = "Junior app developer & UI/UX Designer"
         const val ABOUT_ME =
-            "Hello, I'm a third-year student at the Faculty of Informatics and Management in Hradec Králové. I am passionate about mobile app design and development for Android, utilizing the Kotlin programming language ,Jetpack Compose framework and Figma.\n"
+            "Hello, I'm a third-year student at the Faculty of Informatics and Management in Hradec Králové. I am passionate about mobile app design and development for Android, utilizing the Kotlin programming language , Jetpack Compose framework and Figma.\n"
         const val BUTTON_TEXT = "Get in touch"
         const val ROBOTO_CONDENSED = "RobotoCondensedBold"
         const val ROBOTO_REGULAR = "RobotoRegular"
