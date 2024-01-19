@@ -23,20 +23,25 @@ object Res {
         const val INSTAGRAM = "instagram.svg"
         const val INSTAGRAM_LIGHT = "instagram_light.svg"
         const val GITLAB = "gitlab.svg"
-        const val GITLAB_LIGHT = "gitlab_light.svg"
+        const val PLAYSTORE = "playstore.svg"
         const val SUN = "sun.svg"
         const val MOON = "moon.svg"
+        const val FIGMA="figma.svg"
     }
 
     object Image {
         const val PROFILE_PHOTO = "photo.png"
+        const val YAMB_PHOTO = "yamb.svg"
+        const val MONKIFY_PHOTO = "monkify5.svg"
     }
 
     object String {
         const val NAME = "Daniel Pitropovski"
         const val PROFESSION = "Junior app developer & UI/UX Designer"
         const val ABOUT_ME =
-            "Hello, I'm a third-year student at the Faculty of Informatics and Management in Hradec Králové. I am passionate about mobile app design and development for Android, utilizing the Kotlin programming language , Jetpack Compose framework and Figma.\n"
+            "Hello, I'm a third-year student at the Faculty of Informatics and Management in Hradec Králové. I am passionate about mobile app design and development for Android, utilizing the Kotlin programming language, Jetpack Compose framework and Figma.\n"
+        const val ABOUT_YAMB="This small project involves recreating the classic game of Yamb. In this interactive game, users roll the dice and record the resulting values in a table. It's a simple yet engaging activity that adds a fun twist to the traditional dice-rolling experience."
+        const val ABOUT_MONKIFY="Monkify is your dedicated companion on the path to a disciplined and successful life. Unlock your potential by embracing consistency and achieving daily tasks. Define your path with clear, achievable goals, while Monkify holds you accountable, ensuring you stay on track. Cultivate lasting habits for lifelong success with this user-friendly app. "
         const val BUTTON_TEXT = "Get in touch"
         const val ROBOTO_CONDENSED = "RobotoCondensedBold"
         const val ROBOTO_REGULAR = "RobotoRegular"

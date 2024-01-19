@@ -62,16 +62,22 @@ public enum class SocialIcon(
         icon = Res.Icon.GITLAB,
         link = "https://gitlab.com"
     ),
-    GitlabLight(
-        icon = Res.Icon.GITLAB_LIGHT,
-        link = "https://gitlab.com"
+    Playstore(
+        icon = Res.Icon.PLAYSTORE,
+        link = ""
     ),
     Instagram(
         icon = Res.Icon.INSTAGRAM,
         link = "https://www.instagram.com/pitropovski1?igsh=MTZ1NW1odWIwcWZmNg=="
     ),
+    Figma(
+        icon = Res.Icon.FIGMA,
+        link = ""
+    ),
+
     InstagramLight(
         icon = Res.Icon.INSTAGRAM_LIGHT,
         link = ""
-    )
+    ),
+
 }

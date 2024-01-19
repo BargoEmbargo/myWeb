@@ -1,8 +1,6 @@
 package com.example.website.components
 
 import androidx.compose.runtime.Composable
-import com.example.website.components.LeftSide
-import com.example.website.components.RightSide
 import com.example.website.util.Res
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
@@ -17,7 +15,7 @@ import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
 @Composable
-fun ProfileCard(colorMode: ColorMode) {
+fun ProjectCard(colorMode: ColorMode,content: @Composable (breakpoint:Breakpoint) -> Unit){
     val breakpoint = rememberBreakpoint()
     SimpleGrid(
         numColumns = numColumns(base = 1, md = 2),
@@ -28,7 +26,7 @@ fun ProfileCard(colorMode: ColorMode) {
             )
             .thenIf(
                 condition = breakpoint > Breakpoint.MD,
-                other = Modifier.height(Res.Dimens.MAX_CARD_HEIGHT.px)
+                other = Modifier.height(500.px)
             )
             .boxShadow(
                 color = Colors.Black.copy(alpha = 10),
@@ -42,7 +40,7 @@ fun ProfileCard(colorMode: ColorMode) {
                     Res.Theme.DARK_BLUE.color
             )
     ) {
-        LeftSide(colorMode = colorMode, breakpoint = breakpoint)
-        RightSide(breakpoint = breakpoint,Res.Image.PROFILE_PHOTO)
+        content(breakpoint)
+
     }
 }

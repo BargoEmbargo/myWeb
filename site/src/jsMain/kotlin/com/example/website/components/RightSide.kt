@@ -15,20 +15,24 @@ import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import org.jetbrains.compose.web.css.px
 
 @Composable
-fun RightSide(breakpoint: Breakpoint) {
+fun RightSide(breakpoint: Breakpoint,photo:String) {
+    var value =if(photo=="photo.png"){Res.Dimens.MAX_CARD_HEIGHT}else{500}
     Box(
         modifier = Modifier
             .fillMaxWidth()
             .thenIf(
                 condition = breakpoint > Breakpoint.MD,
-                other = Modifier.height((Res.Dimens.MAX_CARD_HEIGHT - 24).px)
+                other = Modifier.height((value - 24).px)
             )
     ) {
         Image(
             modifier = Modifier
                 .fillMaxSize()
-                .objectFit(ObjectFit.Cover),
-            src = Res.Image.PROFILE_PHOTO
+                .objectFit(if(photo=="photo.png"){
+                    ObjectFit.Cover}else{
+                    ObjectFit.Cover}),
+            src = photo
         )
+
     }
 }

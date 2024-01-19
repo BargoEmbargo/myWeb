@@ -25,22 +25,31 @@ import kotlinx.browser.window
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
-
 @Composable
-fun LeftSide(
+fun LeftSideProject(
     colorMode: ColorMode,
     breakpoint: Breakpoint,
+    appName: String,
+    aboutApp: String,
 ) {
+    var figmaLink:String=""
+    var playstoreLink:String=""
+    if(appName=="Yamb Game"){
+        figmaLink="https://www.figma.com/file/fX0CqNTtE9srd1OJsFxfbR/YambGame?type=design&node-id=0%3A1&mode=design&t=qJhGssP41duZfI9H-1"
+        playstoreLink="https://play.google.com/store/apps/details?id=com.yamb.chatgpt"
+    }else if(appName=="Monkify"){
+        figmaLink="https://www.figma.com/file/oiP9dYYuNp304TrvTpIhO6/MonkApp?type=design&node-id=276%3A408&mode=design&t=6z2d4uzASxCMHlqW-1"
+    }
     Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(all = 50.px),
-        verticalArrangement = Arrangement.Center,
+        verticalArrangement = Arrangement.Top,
         horizontalAlignment = if (breakpoint <= Breakpoint.SM)
             Alignment.CenterHorizontally else Alignment.Start
-        ) {
+    ) {
         SpanText(
-            text = Res.String.NAME,
+            text = appName,
             modifier = Modifier
                 .margin(bottom = 12.px)
                 .fontFamily(Res.String.ROBOTO_CONDENSED)
@@ -51,14 +60,6 @@ fun LeftSide(
                     if (breakpoint <= Breakpoint.SM) TextAlign.Center
                     else TextAlign.Start
                 )
-        )
-        SpanText(
-            text = Res.String.PROFESSION,
-            modifier = Modifier
-                .margin(bottom = 24.px)
-                .fontFamily(Res.String.ROBOTO_REGULAR)
-                .color(if (colorMode.isLight) Colors.Black else Colors.White)
-                .fontSize(18.px)
         )
         Surface(
             modifier = Modifier
@@ -86,31 +87,9 @@ fun LeftSide(
                     if (breakpoint <= Breakpoint.SM) TextAlign.Center
                     else TextAlign.Start
                 ),
-            text = Res.String.ABOUT_ME
+            text = aboutApp
         )
-        Button(
-            modifier = ButtonStyle.toModifier()
-                .margin(bottom = 50.px),
-            size = ButtonSize.LG,
-            onClick = { window.location.href = Res.String.MY_EMAIL }
-        ) {
-            Image(
-                modifier = Modifier.margin(right = 12.px),
-                src = if (colorMode.isLight) Res.Icon.EMAIL_LIGHT
-                else Res.Icon.EMAIL_DARK
-            )
-            SpanText(
-                modifier = Modifier
-                    .fontSize(14.px)
-                    .color(
-                        if (colorMode.isLight) Colors.White
-                        else Res.Theme.GRADIENT_ONE_DARK.color
-                    )
-                    .fontWeight(FontWeight.Bold)
-                    .fontFamily(Res.String.ROBOTO_REGULAR),
-                text = Res.String.BUTTON_TEXT
-            )
-        }
+
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -121,15 +100,18 @@ fun LeftSide(
             IconButton(
                 modifier = SocialIconStyle.toModifier(),
                 colorMode = colorMode,
-                icon = SocialIcon.Github.icon,
-                link = SocialIcon.Github.link
+                icon = SocialIcon.Figma.icon,
+                link = figmaLink
             )
-            IconButton(
-                modifier = SocialIconStyle.toModifier(),
-                colorMode = colorMode,
-                icon = SocialIcon.Instagram.icon,
-                link = SocialIcon.Instagram.link
-            )
+            if(playstoreLink.isNotEmpty()){
+                IconButton(
+                    modifier = SocialIconStyle.toModifier(),
+                    colorMode = colorMode,
+                    icon = SocialIcon.Playstore.icon,
+                    link = playstoreLink
+                )
+            }
+
 
         }
     }
