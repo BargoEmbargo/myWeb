@@ -81,7 +81,7 @@ fun LeftSide(
                 .color(if (colorMode.isLight) Colors.Black else Colors.White)
                 .opacity(50.percent)
                 .lineHeight(2)
-                .margin(bottom = 36.px)
+                .margin(bottom = 16.px)
                 .textAlign(
                     if (breakpoint <= Breakpoint.SM) TextAlign.Center
                     else TextAlign.Start
@@ -111,26 +111,6 @@ fun LeftSide(
                 text = Res.String.BUTTON_TEXT
             )
         }
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .gap(12.px),
-            horizontalArrangement = if (breakpoint <= Breakpoint.SM)
-                Arrangement.Center else Arrangement.Start
-        ) {
-            IconButton(
-                modifier = SocialIconStyle.toModifier(),
-                colorMode = colorMode,
-                icon = SocialIcon.Github.icon,
-                link = SocialIcon.Github.link
-            )
-            IconButton(
-                modifier = SocialIconStyle.toModifier(),
-                colorMode = colorMode,
-                icon = SocialIcon.Instagram.icon,
-                link = SocialIcon.Instagram.link
-            )
 
-        }
     }
 }
