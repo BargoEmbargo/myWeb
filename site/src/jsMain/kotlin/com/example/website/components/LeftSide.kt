@@ -55,7 +55,7 @@ fun LeftSide(
         SpanText(
             text = Res.String.PROFESSION,
             modifier = Modifier
-                .margin(bottom = 24.px)
+                .margin(bottom = 14.px)
                 .fontFamily(Res.String.ROBOTO_REGULAR)
                 .color(if (colorMode.isLight) Colors.Black else Colors.White)
                 .fontSize(18.px)
@@ -64,7 +64,7 @@ fun LeftSide(
             modifier = Modifier
                 .height(4.px)
                 .width(40.px)
-                .margin(bottom = 24.px)
+                .margin(bottom = 14.px)
                 .background(
                     if (colorMode.isLight) Res.Theme.BLUE.color
                     else Res.Theme.LIGHT_BLUE.color
@@ -81,7 +81,7 @@ fun LeftSide(
                 .color(if (colorMode.isLight) Colors.Black else Colors.White)
                 .opacity(50.percent)
                 .lineHeight(2)
-                .margin(bottom = 16.px)
+                .margin(bottom = 14.px)
                 .textAlign(
                     if (breakpoint <= Breakpoint.SM) TextAlign.Center
                     else TextAlign.Start

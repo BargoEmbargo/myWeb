@@ -34,11 +34,13 @@ fun LeftSideProject(
 ) {
     var figmaLink:String=""
     var playstoreLink:String=""
+    var githubLink:String=""
     if(appName=="Yamb Game"){
         figmaLink="https://www.figma.com/file/fX0CqNTtE9srd1OJsFxfbR/YambGame?type=design&node-id=0%3A1&mode=design&t=qJhGssP41duZfI9H-1"
         playstoreLink="https://play.google.com/store/apps/details?id=com.yamb.chatgpt"
     }else if(appName=="Monkify"){
         figmaLink="https://www.figma.com/file/oiP9dYYuNp304TrvTpIhO6/MonkApp?type=design&node-id=276%3A408&mode=design&t=6z2d4uzASxCMHlqW-1"
+        githubLink="https://github.com/BargoEmbargo/monkify"
     }
     Column(
         modifier = Modifier
@@ -109,6 +111,14 @@ fun LeftSideProject(
                     colorMode = colorMode,
                     icon = SocialIcon.Playstore.icon,
                     link = playstoreLink
+                )
+            }
+            if(githubLink.isNotEmpty()){
+                IconButton(
+                    modifier = SocialIconStyle.toModifier(),
+                    colorMode = colorMode,
+                    icon = SocialIcon.Github.icon,
+                    link = githubLink
                 )
             }
 
