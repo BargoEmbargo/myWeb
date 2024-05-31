@@ -43,7 +43,7 @@ object Res {
                     "I'd love to join your team and see this as a chance to advance my skills and become a proficient programmer.\n"
         const val ABOUT_YAMB="This small project involves recreating the classic game of Yamb. In this interactive game, users roll the dice and record the resulting values in a table. It's a simple yet engaging activity that adds a fun twist to the traditional dice-rolling experience."
         const val ABOUT_MONKIFY="Monkify is your dedicated companion on the path to a disciplined and successful life. Unlock your potential by embracing consistency and achieving daily tasks. Define your path with clear, achievable goals, while Monkify holds you accountable, ensuring you stay on track." +
-                " Cultivate lasting habits for lifelong success with this user-friendly app. " +
+                " Cultivate lasting habits for lifelong success with this user-friendly app.  " +
                 "\n This app is in the development phase..."
         const val BUTTON_TEXT = "Get in touch"
         const val ROBOTO_CONDENSED = "RobotoCondensedBold"
